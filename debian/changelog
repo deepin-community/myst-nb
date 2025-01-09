@@ -1,5 +1,23 @@
-template-repository (1.0-1) unstable; urgency=medium
+myst-nb (1.1.0-1) unstable; urgency=medium
 
-  * Initial release
+  * Upload to unstable with version 1.1.0
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Xuanteng Huang <xuanteng.huang@outlook.com>  Wed, 08 May 2024 13:32:45 +0800
+
+myst-nb (1.1.0-1~exp1) experimental; urgency=medium
+
+  * New upstream version 1.1.0
+
+ -- Xuanteng Huang <xuanteng.huang@outlook.com>  Fri, 26 Apr 2024 14:02:26 +0800
+
+myst-nb (1.0.0-1) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Xuanteng Huang <xuanteng.huang@outlook.com>  Mon, 22 Apr 2024 10:44:11 +0800
+
+myst-nb (1.0.0-1~exp2) experimental; urgency=medium
+
+  * Initial release (Closes: #1065226)
+
+ -- Xuanteng Huang <xuanteng.huang@outlook.com>  Fri, 29 Mar 2024 22:09:38 +0800

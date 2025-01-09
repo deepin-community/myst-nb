@@ -1,0 +1,190 @@
+Markdown Cell:
+.
+cells:
+  - cell_type: markdown
+    metadata: {}
+    source: |
+        # A Title
+.
+<document ids="a-title" names="a\ title" nb_kernelspec="{'name': 'python3', 'display_name': 'Python 3', 'language': ''}" source="<string>" title="A Title">
+    <title>
+        A Title
+.
+
+Code Cell (no output):
+.
+cells:
+  - cell_type: code
+    metadata: {}
+    execution_count: null
+    source: |
+        a=1
+        print(a)
+    outputs: []
+.
+<document nb_kernelspec="{'name': 'python3', 'display_name': 'Python 3', 'language': ''}" source="<string>">
+    <container cell_index="0" cell_metadata="{}" classes="cell" exec_count="True" nb_element="cell_code">
+        <container classes="cell_input" nb_element="cell_code_source">
+            <literal_block classes="code" xml:space="preserve">
+                a=1
+                print(a)
+.
+
+Code Cell (with lexer):
+.
+metadata:
+    language_info:
+        name: python
+        pygments_lexer: ipython3
+cells:
+  - cell_type: code
+    metadata: {}
+    execution_count: null
+    source: a=1
+    outputs: []
+.
+<document nb_kernelspec="{'name': 'python3', 'display_name': 'Python 3', 'language': ''}" nb_language_info="{'name': 'python', 'pygments_lexer': 'ipython3'}" source="<string>">
+    <container cell_index="0" cell_metadata="{}" classes="cell" exec_count="True" nb_element="cell_code">
+        <container classes="cell_input" nb_element="cell_code_source">
+            <literal_block classes="code ipython3" xml:space="preserve">
+                <inline classes="n">
+                    a
+                <inline classes="o">
+                    =
+                <inline classes="mi">
+                    1
+.
+
+Code Cell (simple output):
+.
+cells:
+  - cell_type: code
+    metadata: {}
+    execution_count: 1
+    source: |
+        a=1
+        print(a)
+    outputs:
+      - name: stdout
+        output_type: stream
+        text: "1"
+.
+<document nb_kernelspec="{'name': 'python3', 'display_name': 'Python 3', 'language': ''}" source="<string>">
+    <container cell_index="0" cell_metadata="{}" classes="cell" exec_count="1" nb_element="cell_code">
+        <container classes="cell_input" nb_element="cell_code_source">
+            <literal_block classes="code" xml:space="preserve">
+                a=1
+                print(a)
+        <container classes="cell_output" nb_element="cell_code_output">
+            <literal_block classes="code myst-ansi output stream" xml:space="preserve">
+                1
+.
+
+Raw Cell
+.
+cells:
+  - cell_type: raw
+    metadata: {"format": "text/html"}
+    source: |
+        <div>
+            <h1>A Title</h1>
+        </div>
+.
+<document nb_kernelspec="{'name': 'python3', 'display_name': 'Python 3', 'language': ''}" source="<string>">
+    <raw classes="output text_html" format="html" xml:space="preserve">
+        <div>
+            <h1>A Title</h1>
+        </div>
+.
+
+Mixed Cells:
+.
+cells:
+  - cell_type: markdown
+    metadata: {}
+    source: |
+        # A Title
+  - cell_type: code
+    metadata: {}
+    execution_count: null
+    source: |
+        a=1
+        print(a)
+    outputs: []
+  - cell_type: markdown
+    metadata: {}
+    source: |
+        b
+.
+<document ids="a-title" names="a\ title" nb_kernelspec="{'name': 'python3', 'display_name': 'Python 3', 'language': ''}" source="<string>" title="A Title">
+    <title>
+        A Title
+    <container cell_index="1" cell_metadata="{}" classes="cell" exec_count="True" nb_element="cell_code">
+        <container classes="cell_input" nb_element="cell_code_source">
+            <literal_block classes="code" xml:space="preserve">
+                a=1
+                print(a)
+    <paragraph>
+        b
+.
+
+Reference definitions defined in different cells:
+.
+cells:
+  - cell_type: markdown
+    metadata: {}
+    source: |
+        [a]: before
+  - cell_type: markdown
+    metadata: {}
+    source: |
+        [a] [b]
+  - cell_type: markdown
+    metadata: {}
+    source: |
+        [b]: after
+.
+<document nb_kernelspec="{'name': 'python3', 'display_name': 'Python 3', 'language': ''}" source="<string>">
+    <paragraph>
+        <reference refuri="before">
+            a
+         
+        <reference refuri="after">
+            b
+.
+
+Footnote definitions defined in different cells:
+.
+cells:
+  - cell_type: markdown
+    metadata: {}
+    source: |
+        [^a]: before
+  - cell_type: markdown
+    metadata: {}
+    source: |
+        [^a] [^b]
+  - cell_type: markdown
+    metadata: {}
+    source: |
+        [^b]: after
+.
+<document nb_kernelspec="{'name': 'python3', 'display_name': 'Python 3', 'language': ''}" source="<string>">
+    <paragraph>
+        <footnote_reference auto="1" ids="footnote-reference-1" refid="a">
+            1
+         
+        <footnote_reference auto="1" ids="footnote-reference-2" refid="b">
+            2
+    <transition classes="footnotes">
+    <footnote auto="1" backrefs="footnote-reference-1" ids="a" names="a">
+        <label>
+            1
+        <paragraph>
+            before
+    <footnote auto="1" backrefs="footnote-reference-2" ids="b" names="b">
+        <label>
+            2
+        <paragraph>
+            after
+.
